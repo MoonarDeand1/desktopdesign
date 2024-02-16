@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/side.css">
+</head>
+<body>
+    <script>
+        function Log_In(){
+            let a = document.getElementById("Username").value;
+            let b = document.getElementById("Password").value;
+            if (a.length >= 4 && b.length >= 4){
+                let svar = document.getElementById("Successful").innerHTML = "Successful";
+                window.location.href = "side2.html";
+            }
+            else{
+                let svar = document.getElementById("Successful").innerHTML = "There must be 4 symbols in Username and 4 symbols in password";
+            }
+        }
+        function registr(){
+            window.location.href = "regisrt.html"; 
+        }
+        function norwigian(){
+            window.location.href = "minSide.html"; 
+        }
+    </script>
+
+    <div style="text-align: center;"> 
+        <p id="logo"><img src="../image/logo3.gif" alt=""></p>
+        <h3>Username: </h3>
+        <input id="Username" type="text">
+        <h3>Password: </h3>
+        <input id="Password" type="password"><br><br><br>
+        
+        <button onclick="Log_In()">Log In</button>
+        <p id="Successful"></p>
+    </div>
+<br><br><br><br><br>
+<div class="button-container">
+    <button onclick="registr()">Registrer</button>
+</div>
+<div class="button-container2">
+    <button onclick="norwigian()">NO</button>
+</div>
+
+</body>
+</html>
